@@ -12,13 +12,12 @@ body {
 
 /* -----------------------MOBILE VERSION------------------------------------ */
 
-/* Contains everything */
 
 .nav-container {
   font-weight: 700;
   background-color: black;
   color: white;
-  height: 150px;
+  height: 100%;
 
 }
 
@@ -35,7 +34,7 @@ body {
 div.relative {
   position: relative;
   right: 350px;
-  top:20px;
+  top: 4px;
   font-family: monospace;
 
 }
@@ -55,17 +54,16 @@ div.relative {
 /* ----------------------MOBILE VERSION------------------------------- */
 
 
-@media screen and (max-width: 1060px) {
+/* @media screen and (max-width: 1060px) {
     .nav-container { width:67%; }
     .nav-container{ width:30%; margin-left:3%;}  
-}
+} */
 
 /* Tabled Portrait */
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
     .nav-container { width:100%; }
     .nav-container { width:100%; margin:0; border:none; }
-}
-
+} */
 
 
 
