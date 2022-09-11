@@ -21,6 +21,64 @@ body {
 
 }
 
+/*if not below then this code */
+
+.crop {
+  position: relative;
+  padding-bottom: 40%;
+  height: 0;
+  margin-left: 500px;
+  margin-top: 100px; 
+  overflow: hidden;
+  
+}
+.crop iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 600px;
+  height: 600px;
+  margin-bottom: 30px;
+  
+}  
+
+
+/* iframe {
+  border-width: 2px;
+  border-style: inset;
+  background-color: #000;
+  border-image: initial;
+  overflow: hidden;
+  height: 600px;
+  margin-left: 500px;
+  
+} */
+
+
+/* .crop {
+  width: 153px;
+  height: 350px;
+  overflow: hidden;
+  margin-left: 650px;
+  margin-top: 100px;
+  background-size: 150px;
+
+}
+
+.crop iframe {
+  width: 400px;
+  height: 450px;
+  margin: -50px 0 0 -120px;
+
+  
+} */
+
+/* iframe {
+  display: block;
+  border-style:none;
+  text-align: center;
+  margin: auto;
+}  */
 
 /* --------------------DESKTOP VERSION----------------------- */
 
