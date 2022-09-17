@@ -5,80 +5,129 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-   background-color: #E6CB99;
+  font-family: noe;
+  background-color: #E6CB99;
 }
 
 
+
+
+
+
+/* Centering all the content, and justify them and displaying them on the same row */
+.top-bar-container {
+  margin: auto;
+  width: 40%;
+  height: 100%;
+  padding: 0 10px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+}
+
+.top-bar-misc-container {
+  grid-column: 2/-1;
+  padding-right: 15px;
+  justify-self: end;
+}
+
+
+img{
+
+max-width: 100%;
+
+}
+
+
+video {
+	max-width: 100%;
+	height: auto;
+}
+
+.video-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+}
+
+.video-container iframe,  
+.video-container object,  
+.video-container embed {
+	position: absolute;
+	top: 0;
+	left: 25%;
+	width: 50%;
+	height: 90%;
+}
+
+
+
+
+/* ----------------------MOBILE VERSION------------------------------- */
+
+/* Depending on the size, we adjust the width to make it look better */
+@media only screen and (max-width: 1440px) {
+  /* Remove the min-width and width conditions from the containers */
+  .container {
+    width: 100%;
+    min-width: none;
+    height: auto;
+    float: left;
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+  /* Remove the min-width and width conditions from the containers */
+  .container {
+    width: 100%;
+    min-width: none;
+    height: auto;
+    float: left;
+  }
+
+}
+
+@media only screen and (max-width: 480px) {
+  /* Remove the min-width and width conditions from the containers */
+  .container {
+    width: 100%;
+    min-width: none;
+    height: auto;
+    float: left;
+  }
+
+}
+
+/*========================================================================= 
+3. Working on the navigation bar
+===========================================================================*/
+
 /* -----------------------MOBILE VERSION------------------------------------ */
 
+/* Contains everything */
 
 .nav-container {
   font-weight: 700;
   background-color: black;
   color: white;
-  height: 100%;
-
+  height: auto;
+  padding: 1em 0;
 }
 
-/*if not below then this code */
 
-.crop {
-  position: relative;
-  padding-bottom: 40%;
-  height: 0;
-  margin-left: 500px;
-  margin-top: 100px; 
-  overflow: hidden;
-  
-}
-.crop iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 600px;
-  height: 600px;
-  margin-bottom: 30px;
-  
-}  
-
-
-/* iframe {
-  border-width: 2px;
-  border-style: inset;
-  background-color: #000;
-  border-image: initial;
-  overflow: hidden;
-  height: 600px;
-  margin-left: 500px;
-  
-} */
-
-
-/* .crop {
-  width: 153px;
-  height: 350px;
-  overflow: hidden;
-  margin-left: 650px;
-  margin-top: 100px;
-  background-size: 150px;
-
+/* In mobile the anchors need to be in column form */
+.nav-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  font-family: monospace ;
 }
 
-.crop iframe {
-  width: 400px;
-  height: 450px;
-  margin: -50px 0 0 -120px;
 
-  
-} */
-
-/* iframe {
-  display: block;
-  border-style:none;
-  text-align: center;
-  margin: auto;
-}  */
 
 /* --------------------DESKTOP VERSION----------------------- */
 
@@ -86,16 +135,9 @@ body {
   /* hides menu and cross button when in desktop */
   .nav {
     width: 50%;
-    margin: auto;
+    /* margin: auto; */
+   
   }
-
-div.relative {
-  position: relative;
-  right: 45%;
-  top: 4px;
-  font-family: monospace;
-
-}
 
   .nav-toggle {
     display: none;
@@ -103,25 +145,76 @@ div.relative {
 
   /* removing padding for better appearance */
   .nav-container {
-    padding: 0em;
+    padding: 1em;
+  }
+
+  /* The content needs to be displayed in a row in desktop mode */
+  .nav-content {
+    /* flex-direction: row; */
+    gap: 0;
+    height: 100%;
+    /* text-align: justify;
+    text-justify: inter-word; */
+    font-family: monospace ;
   }
 
 }
 
+/*---------------------------------------------------------------
+4.Working on the End bar (search, cart, catchphrase)
+----------------------------------------------------------------- */
+
+/* ------------------------DESKTOP VERSION----------------------- */
+
+/* Centering all of the content */
+.end-header-bar-container {
+  height: 80px;
+}
+
+.end-header-bar {
+  width: 50%;
+  height: 100%;
+  margin: auto;
+  padding: 0 10px;
+
+  justify-items: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-flow: column;
+  column-gap: 30px;
+}
+
+
 
 /* ----------------------MOBILE VERSION------------------------------- */
+/* Depending on the size, we adjust width it to make look as good as possible */
+@media only screen and (max-width: 1440px) {
+  /* Remove the min-width and width conditions from the containers */
+  .end-header-bar {
+    width: 75%;
+    min-width: none;
+  }
+}
 
+@media only screen and (max-width: 1024px) {
+  /* Remove the min-width and width conditions from the containers */
+  .end-header-bar {
+    width: 90%;
+    min-width: none;
+  }
+}
 
-/* @media screen and (max-width: 1060px) {
-    .nav-container { width:67%; }
-    .nav-container{ width:30%; margin-left:3%;}  
-} */
+@media only screen and (max-width: 768px) {
+  /* Remove the min-width and width conditions from the containers */
+  .end-header-bar {
+    width: 100%;
+    min-width: none;
+  }
 
-/* Tabled Portrait */
-/* @media screen and (max-width: 768px) {
-    .nav-container { width:100%; }
-    .nav-container { width:100%; margin:0; border:none; }
-} */
-
-
-
+  /* Making cart button smaller */
+  .cart-button {
+    font-size: 0.75em;
+    padding: 5px 10px;
+  }
+}
