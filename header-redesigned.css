@@ -94,14 +94,10 @@ body {
 
 }
 
-
-
-
-
-
 p{
 
-  font-family: Tahoma;
+  font-family: Trebuchet MS;
+  font-size: 18px;
   text-align: justify;
   text-justify: inter-word;
   padding-left:20%;
@@ -157,9 +153,9 @@ video {
 .video-container embed {
 	position: absolute;
 	top: 0;
-	left: 30%;
-	width: 40%;
-	height: 80%;
+	left: 20%;
+	width: 60%;
+	height: 100%;
 }
 
 
@@ -214,8 +210,13 @@ video {
 
 }
 
+
+
+
+
+
 @media only screen and (max-width: 480px) {
-  /* Remove the min-width and width conditions from the containers */
+  /* Remove the min-width and width conditions from the containers*/
   .container {
     width: 100%;
     min-width: none;
@@ -236,6 +237,15 @@ video {
   }
 
 }
+
+
+
+
+
+
+
+
+
 
 /*=========================================================================
 3. Working on the navigation bar
@@ -303,6 +313,12 @@ video {
   }
 
 }
+
+
+
+
+
+
 
 /*---------------------------------------------------------------
 4.Working on the End bar (search, cart, catchphrase)
